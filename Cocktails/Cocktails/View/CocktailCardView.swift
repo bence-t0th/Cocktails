@@ -44,13 +44,16 @@ struct CocktailCardView: View {
                 // Button
                 StartButtonView()
                 
+                Spacer()
+                
             } //VStack
         } //ZStack
         .onAppear {
-            withAnimation(.easeOut(duration: 0.2)) {
+            withAnimation(.easeOut(duration: 0.5)) {
                 isAnimating = true
             }
             isAnimating = false
+            UIScrollView.appearance().bounces = false
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .center)
         .background(LinearGradient(gradient: Gradient(colors: cocktail.gradientColors), startPoint: .top, endPoint: .bottom))

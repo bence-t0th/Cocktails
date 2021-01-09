@@ -75,6 +75,43 @@ Fill to desired level with Coca-Cola.
 
 Stir lightly.
 """,
-        ingredients: ["40 ml Jack Daniel's", "160 ml Coca-Cola", "Ice cubes"])
+        ingredients: ["40 ml Jack Daniel's", "160 ml Coca-Cola", "Ice cubes"]),
+    
+    Cocktail(
+        title: "Mojito",
+        headline: "Its combination of sweetness, citrus, and mint has made the mojito a popular summer drink.",
+        image: "mojito",
+        gradientColors: [Color("ColorMojitoLight"), Color("ColorMojitoDark")],
+        description: "Havana, Cuba, is the birthplace of the mojito, although its exact origin is the subject of debate. A survey by an international market research company found that in 2016 the mojito was the most popular cocktail in Britain and France.",
+        serving: """
+Place the mint leaves and 3 or 4 lime slices in a highball glass and crush using a muddler.
+
+Add the sugar, white rum and ice cubes.
+
+Top up with club soda.
+
+Stir using a mixing spoon.
+
+Garnish with a sprig of mint.
+""",
+        ingredients: ["45 ml white rum", "60 ml club soda", "Fresh mint leaves", "1 lime", "2 tsp. sugar", "Ice cubes", "1 sprig fresh mint"]),
+    
+    Cocktail(
+        title: "Blue Lagoon",
+        headline: "It is typically garnished with an orange slice or a lemon slice, and served in a highball glass.",
+        image: "bluelagoon",
+        gradientColors: [Color("ColorBluelagoonLight"), Color("ColorBluelagoonDark")],
+        description: "Everything you need to know about the Blue Lagoon is right in the name. Tall, refreshing and bluer than the bluest Caribbean sky, the cocktail turns vodka, blue curaçao and lemonade into a drink you’ll want to dive into.",
+        serving: """
+Combine all ingredients in a highball glass containing a few ice cubes, except for the starfruit slices.
+
+Stir using a mixing spoon.
+
+Garnish with starfruit slices.
+
+Add lemon-lime soda to this recipe to obtain a Blue Lagoon Highball, which has a sweeter taste.
+""",
+        ingredients: ["45 ml vodka", "15 ml Blue Curaçao", "15 ml lemon juice", "Ice cubes", "Starfruit slices"])
+
 
 ]

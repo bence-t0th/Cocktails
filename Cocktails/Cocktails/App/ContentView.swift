@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - Properties
-    
+    @State private var active: Bool = false
     var cocktails = cocktailData
     
     @State private var isShowingSettings = false
+    
+    @State var accent: Color = Color.white
     
     // MARK: - Body
     
@@ -34,6 +36,9 @@ struct ContentView: View {
             }
             .sheet(isPresented: $isShowingSettings) {
                 SettingsView()
+            })
+            .onAppear(perform: {
+                UIScrollView.appearance().bounces = true
             })
         } // Navigation
     }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CocktailRowView: View {
     // MARK: - Properties
-    
+
     var cocktail: Cocktail
     
     // MARK: - Body

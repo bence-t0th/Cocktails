@@ -20,16 +20,16 @@ struct StartButtonView: View {
         }) {
             HStack(spacing: 8) {
                 Text("Start")
-                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 2, x: 2, y: 2)
+                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.1), radius: 2, x: 2, y: 2)
 
                 Image(systemName: "arrow.right.circle")
                     .imageScale(.large)
-                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 2, x: 2, y: 2)
+                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.1), radius: 2, x: 2, y: 2)
             } // HStack
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
             .background(Capsule().strokeBorder(Color.white, lineWidth: 1.25))
-            .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 2, x: 2, y: 2)
+            .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.1), radius: 2, x: 2, y: 2)
         } // Button
         .accentColor(.white)
     }

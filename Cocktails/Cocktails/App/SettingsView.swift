@@ -39,7 +39,7 @@ struct SettingsView: View {
                     GroupBox(label: SettingsLabelView(labelText: "Customization", labelImage: "paintbrush")) {
                         Divider().padding(.vertical, 4)
                         
-                        Text("If you wish, you can see the welcome cards on the screen again.")
+                        Text("If you wish, you can see the recommendation cards on the screen when you start the application.")
                             .padding(.vertical, 8)
                             .frame(minHeight: 60)
                             .layoutPriority(1)
@@ -47,8 +47,13 @@ struct SettingsView: View {
                             .multilineTextAlignment(.leading)
                         
                         Toggle(isOn: $isOnboarding) {
-                            Text("Reset".uppercased())
+                            Text("Recommendations".uppercased())
                         }
+                        .padding()
+                        .background(
+                            Color(UIColor.tertiarySystemBackground)
+                                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                        )
                     }
 
                     // MARK: - Section 3

@@ -15,13 +15,17 @@ struct OnboardingView: View {
     // MARK: - Body
     
     var body: some View {
-        TabView {
-            ForEach(cocktails[0..<4]) { cocktail in
-                CocktailCardView(cocktail: cocktail)
+        NavigationView {
+            TabView {
+                ForEach(cocktails.shuffled()[0..<3]) { item in
+                    CocktailCardView(cocktail: item)
+                }
             }
+            .tabViewStyle(PageTabViewStyle())
+            .padding(.top, 20)
+            .padding(.bottom, 10)
+            .navigationTitle("Recommendations")
         }
-        .tabViewStyle(PageTabViewStyle())
-        .padding(.vertical, 20)
     }
 }
 
