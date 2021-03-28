@@ -1,0 +1,19 @@
+before_install:
+  - gem install cocoapods
+
+install:
+  - brew update && brew upgrade swiftlint
+  - pod install
+
+language: swift
+osx_image: xcode12.4
+xcode_workspace: Cocktails.xcworkspace
+xcode_scheme: Cocktails
+xcode_destination: platform=iOS Simulator,OS=14.4,name=iPhone 11 Pro
+
+script:
+ - swiftlint
+ - xcodebuild clean build -workspace 'Cocktails.xcworkspace' -scheme 'Cocktails' -destination 'platform=iOS Simulator,OS=14.4,name=iPhone 11 Pro'
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
